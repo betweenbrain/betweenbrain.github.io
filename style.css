@@ -5,6 +5,8 @@
 
 /* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
 html {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   font-size: 62.5%;
 }
 body {
@@ -12,7 +14,6 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
 }
 
 /**
@@ -27,6 +28,11 @@ a:focus {
   outline: thin dotted;
 }
 
+a:focus,
+a:hover {
+  color: #ffffff;
+  background-color: #0060a1;
+}
 small {
   font-size: 75%;
 }
@@ -42,8 +48,7 @@ h5,
 h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-  margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 300;
 }
 h1 {
@@ -81,7 +86,7 @@ h6 {
  * Paragraphs
  */
 p {
-  margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
+  margin: 1.5em auto 0 auto; /* bottom margin for paragraphs */
 }
 
 /**
@@ -112,55 +117,31 @@ blockquote p:last-child {
  * Layout styles
  */
 
-/* Full size background image */
-html,
-#container,
-.inner {
-  background-color: transparent;
-}
-html {
-  background: rgba(0, 0, 0, 0.8);
-
-}
 body {
-  max-width: 800px;
-  margin: 25px auto;
+  margin: 2.5rem;
 }
-header,
-#content,
-footer {
+header {
   padding: 25px;
-  color: #ffffff;
 }
 iframe {
   max-width: 100%;
 }
-
-/* Menu Links */
-ul.main-menu {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  list-style: none;
-}
-ul.main-menu li a {
-  margin-right: 20px;
-  font-size: 2rem;
-  border-bottom: solid transparent 3px;
-  color: #cfd2da;
-}
-ul.main-menu li a:hover {
-  color: #ffffff;
-}
-ul.main-menu li a.active {
-  color: #ffffff;
-  border-bottom-color: #ef6d3d;
+.headshot {
+  border-radius: 50%;
+  height: 26rem;
+  width: 26rem;
 }
 
-.headshot{
-    border-radius: 50%;
-    height:26rem;
-    width: 26rem;
+@media (min-width: 800px) {
+  body {
+    max-width: 80rem;
+    margin: 2.5rem auto;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
