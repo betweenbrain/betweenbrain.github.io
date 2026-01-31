@@ -85,6 +85,7 @@ h6 {
 /**
  * Paragraphs
  */
+em,
 p {
   margin: 1.5em auto 0 auto; /* bottom margin for paragraphs */
 }
