@@ -20,7 +20,7 @@ body {
  * Links
  */
 a {
-  font-weight: normal;
+  font-weight: bold;
   text-decoration: none;
   color: #ef6d3d;
 }
@@ -85,7 +85,6 @@ h6 {
 /**
  * Paragraphs
  */
-em,
 p {
   margin: 1.5em auto 0 auto; /* bottom margin for paragraphs */
 }
