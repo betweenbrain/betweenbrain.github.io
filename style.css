@@ -144,4 +144,7 @@ iframe {
     background-color: #ffffff;
     color: #000000;
   }
+  a {
+    color: #0060a1;
+  }
 }
